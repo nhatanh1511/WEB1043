@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lab62.js"></script>
+</head>
+
+<style>
+    .container{
+        width: 400px;
+        height: 500px;
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        flex-grow: 1;
+        background-color: blue;
+    }
+    .gameBoard{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn{
+        flex-grow: 1;
+        margin: 5px;
+        font-size: 5em;
+        font-weight: bold;
+        width: 90px;
+        height: 90px;
+    }
+    .title{
+        font-size: 1.8em;
+        text-align: center;
+        color: rgb(red, green, blue);
+    }
+    .xbtn{
+        color: rgb(red, green, blue);
+    }
+    .obtn{
+        color: red;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="title">TicTacToe Game</div>
+        <div class="gameBoard">
+        <div class="row">
+            <button class="btn" onclick="play(this)"></button>
+            <button class="btn" onclick="play(this)"></button>
+            <button class="btn" onclick="play(this)"></button>
+        </div>
+        <div class="row">
+            <button class="btn" onclick="play(this)"></button>
+            <button class="btn" onclick="play(this)"></button>
+            <button class="btn" onclick="play(this)"></button>
+        </div>
+        <div class="row">
+            <button class="btn" onclick="play(this)"></button>
+            <button class="btn" onclick="play(this)"></button>
+            <button class="btn" onclick="play(this)"></button>
+        </div>
+
+    </div>
+        
+    </body>
+
+</html>

@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var w;
+
+    function openNewTab() {
+        var o;
+        var name = navigator.userAgent;
+        if (name.indexOf("Edge")) {
+            o = "menu=yes,toolbar=yes, width = 100,height=100"
+        } else {
+            o = "menu=yes,toolbar=yes, width = 150,height=150"
+        }
+        w = window.open("https://www.google.com", "Tìm kiếm", o);
+    };
+    function closeTab() {
+      w.close();
+      alert("đã đóng tab");
+    };
+    function check() {
+        if (w.closed) {
+            alert("Tab đã được đóng");
+        } else {
+            alert("Tab đang được mở");
+        }
+    };
+</script>
+<body>
+ 
+    <button onclick="openNewTab()">Mở cửa sổ mới</button>
+    <button onclick="closeTab()">Đóng cửa sổ mới</button>
+    <button onclick="check()">Kiểm tra cửa sổ đã đóng hay chưa</button>
+</body>
+
+</html>
