@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab82</title>
+</head>
+<body>
+    <p>Bấm vào nút để lấy tọa độ của bạn!</p>
+    <button onclick="getLocation()">Nhấn thử</button>
+    <p id="demo"></p>
+    <script>
+        var x  =document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Nhấp vào nút để lấy tọa độ của bạn!";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Vĩ độ: " + position.coords.latitude + "<br> Kinh độ: " + position.coords.longitude;
+        }
+    </script>
+</body>
+</html>
