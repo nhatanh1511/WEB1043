@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Form id="my-frm">
+    <input type="text" name="firstname" placeholder="First name"> <br>
+    <input type="text" name="lastname" placeholder="Last name"><br>
+    <input type="text" name="age" placeholder="Age"><br>
+    <input type="button" onclick="sendInfo()" value="Submit">
+</Form>
+<h3 id="welcome"></h3>
+<div></div>
+<script>
+    function sendInfo() {
+        var inputs = document.getElementById("my-frm").elements;
+        var inputByIndex = inputs[0];
+        var inputByName = inputs["firstname"];
+
+
+
+        console.log([`FirstName, ` + inputs["firstname"].value]);
+        console.log([`Last name, ` + inputs["lastname"].value]);
+        console.log([`Age, ` + inputs["age"].value]);
+    }
+
+</script>
+<body>
+</body>
+</html>

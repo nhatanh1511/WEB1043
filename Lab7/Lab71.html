@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #dropBox {
+   width: 100px;
+   height: 100px;
+   text-align: center;
+   border: 1px solid black;
+ }
+  
+ #full{
+     width: 100px;
+     height: 200px;
+     border: 1px solid black;
+ }
+ #dragA{
+    
+    text-align: center;
+ }
+</style>
+<body>
+    <div id="full">
+ <div id="dropBox" ondragover="dragOver(event);" ondrop="drop(event);">
+ </div>
+ <p id="dragA"   draggable="true" ondragstart="dragStart(event);" width="180" height="180" >Drag Me Please</p>
+    </div>
+</body>
+<script>
+    function dragStart(e) {
+   e.dataTransfer.effectAllowed = "move";
+   e.dataTransfer.setData("Text", e.target.getAttribute("id"));
+ }
+ function dragOver(e) {
+   e.preventDefault();
+   e.stopPropagation();
+ }
+ function drop(e) {
+   e.stopPropagation();
+   e.preventDefault();
+   var data = e.dataTransfer.getData("Text");
+   e.target.appendChild(document.getElementById(data));
+ }
+</script>
+</html>
